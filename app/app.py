@@ -39,5 +39,5 @@ def create_app():
 app = create_app()
 
 if __name__ == "__main__":
-    # Bind to all interfaces so the app is reachable from a container.
+    # Bind to all interfaces so the app is reachable from a container
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", "5000")))
