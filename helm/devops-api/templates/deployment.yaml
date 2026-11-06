@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.appNamespace }} 
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+    spec:
+      containers:
+      - name: {{ .Values.appName }}
+        image: "{{ .Values.imageRepository }}:{{ .Values.imageTag }}"
+
+        ports:
+        - containerPort: {{ .Values.appPort }}
+
+        envFrom:
+        - configMapRef:
+            name: devops-api-config
+
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: {{ .Values.appPort }}
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 2
+          failureThreshold: 3
+
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: {{ .Values.appPort }}
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 2
+          failureThreshold: 3
+
+      imagePullSecrets:
+      - name: dockerhub-secret-devops   
