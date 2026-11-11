@@ -1,7 +1,7 @@
 appName: devops-api
 appNamespace: devops
 
-replicas: 3
+replicas: 2
 
 imageRepository: docker.io/vatcharadze/devops-api
 imageTag: 1.0.0
