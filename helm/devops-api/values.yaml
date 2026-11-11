@@ -4,7 +4,7 @@ appNamespace: devops
 replicas: 2
 
 imageRepository: docker.io/vatcharadze/devops-api
-imageTag: "latest"
+imageTag: "30bf96051356c610a2711bfdca70db13062dc8da"
 
 appPort: 5000
 
