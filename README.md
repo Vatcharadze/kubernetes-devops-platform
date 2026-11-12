@@ -260,14 +260,7 @@ Application settings are managed through a Kubernetes **ConfigMap**:
 
 Chart settings (image, replicas, service, ingress, resources) live in `helm/devops-api/values.yaml`.
 
-## Roadmap
 
-- [ ] CI pipeline (build, test, push image) with GitHub Actions
-- [ ] Automated image tag updates in Helm values
-- [ ] Horizontal Pod Autoscaler
-- [ ] Secrets management (Sealed Secrets or External Secrets)
-- [ ] TLS for Ingress with cert-manager
+## Author
 
-## License
-
-Add a license of your choice (e.g. MIT) and reference it here.
+Created by **Davit Vatcharadze** ([@Vatcharadze](https://github.com/Vatcharadze)).
