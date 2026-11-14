@@ -20,8 +20,7 @@ A hands-on DevOps platform that takes a containerized Python API from source cod
 - [Monitoring and Alerting](#monitoring-and-alerting)
 - [Testing](#testing)
 - [Configuration](#configuration)
-- [Roadmap](#roadmap)
-- [License](#license)
+- [Author](#Author)
 
 ## Overview
 
