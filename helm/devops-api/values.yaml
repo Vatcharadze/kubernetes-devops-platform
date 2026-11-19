@@ -1,15 +1,10 @@
 appName: devops-api
 appNamespace: devops
-
 replicas: 2
-
 imageRepository: docker.io/vatcharadze/devops-api
-imageTag: "latest"
-
+imageTag: "9655eebadeeb84ef5e0e9812607aa82e16fe6f0e"
 appPort: 5000
-
 appDomain: devopsapi.com
-
 #For configmap -->
 appEnv: "development"
 appVersion: "1.0.0"
